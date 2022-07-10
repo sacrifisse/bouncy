@@ -4,3 +4,165 @@ body {
     font-family: Open Sans, sans-serif;
     font-weight: 500;
 }
+
+/* HEADER
+---------------------------------------------*/
+
+header {
+
+    height: 105px;
+    background-color: cadetblue;
+
+    .container {
+        height: 105px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+/* MENU STYLE */
+
+.header__nav {
+    display: block;
+
+}
+
+.header__menu {
+    display: flex;
+    position: relative;
+    z-index: 2;
+
+    
+
+}
+
+.header__menu li {
+    list-style: none;
+    margin: 5px;
+    min-width: 100px;
+
+    text-align: center;
+}
+
+.menu__item {
+    color: rgb(235, 235, 235);
+    
+}
+
+.menu__item:hover {
+    color: #fff;
+
+    border: 2px solid;
+    border-radius: 20px;
+
+    padding: 6px 12px 6px 12px;
+}
+
+.menu__item:active {
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+
+    border: 2px solid #fff;
+    border-radius: 20px;
+
+    padding: 6px 12px 6px 12px;
+}
+
+/* MEDIA */
+
+@media (max-width: 767px) {
+    .header__nav {
+        display: block;
+        position: absolute;
+        width: 50%;
+        transition: all 0.4s ease;
+        right: -100%;
+
+    }
+
+    header {
+        .container {
+            align-items: flex-start;
+        }
+    }
+
+    .header__menu {
+        display: block; 
+        text-align: right;
+
+        margin-top: 100px;
+
+    }
+
+    .header__nav.open-menu{
+        right:0;
+
+    }
+
+    .header__menu li {
+        margin: 30px;
+        
+    }
+
+    /* BUTTON STYLE */
+
+    .menu-burger__header {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin: 10px;
+        right: 0;
+        z-index: 4;
+    }
+
+    .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #515758;
+        margin: 0 auto;
+
+    }
+    
+    .menu-burger__header span{
+        top: 14px;
+
+    }
+
+    .menu-burger__header:after, .menu-burger__header:before{
+        content: '';
+
+    }
+
+    .menu-burger__header:after{
+        bottom: 5px;
+
+    }
+
+    .menu-burger__header:before{
+        top: 5px;
+
+    }
+
+    .menu-burger__header.open-menu span {
+        opacity:0; 
+        transition: 0.5s; 
+
+    }
+
+    .menu-burger__header.open-menu:before {
+        transform: rotate(38deg);
+        top: 13px;
+        transition: 0.4s;
+
+    }
+
+    .menu-burger__header.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 14px;
+        transition: 0.4s;
+
+    }
+}
