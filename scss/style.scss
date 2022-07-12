@@ -88,18 +88,16 @@ header {
 
 @media (max-width: 767px) {
     .header__nav {
-        display: block;
+        // display: block;
         position: absolute;
         width: 50%;
         transition: all 0.4s ease;
         right: -100%;
-
+        display: none;
     }
 
-    header {
-        .container {
-           
-        }
+    .open-menu {
+        display: block;
     }
 
     .header__menu {

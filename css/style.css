@@ -124,12 +124,16 @@ header .container {
 /* MEDIA */
 @media (max-width: 767px) {
 	.header__nav {
-		display: block;
 		position: absolute;
 		width: 50%;
 		-webkit-transition: all 0.4s ease;
 		transition: all 0.4s ease;
 		right: -100%;
+		display: none;
+	}
+
+	.open-menu {
+		display: block;
 	}
 
 	.header__menu {
