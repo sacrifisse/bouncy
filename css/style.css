@@ -49,6 +49,7 @@ select {
 body {
 	font-family: Open Sans, sans-serif;
 	font-weight: 500;
+	overflow-x: hidden;
 }
 
 /* HEADER
@@ -62,12 +63,18 @@ header .container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+}
+
+.logo {
+	font-family: Source Sans Pro, sans-serif;
+	font-weight: 900;
+	color: #fff;
 }
 
 /* MENU STYLE */
@@ -106,6 +113,7 @@ header .container {
 	background-color: #fff;
 	border: 2px solid #fff;
 	border-radius: 20px;
+	font-weight: 700;
 	padding: 6px 12px 6px 12px;
 }
 
@@ -120,16 +128,11 @@ header .container {
 		right: -100%;
 	}
 
-	header .container {
-		-webkit-box-align: start;
-		    -ms-flex-align: start;
-		        align-items: flex-start;
-	}
-
 	.header__menu {
 		display: block;
 		text-align: right;
-		margin-top: 100px;
+		position: absolute;
+		top: 50px;
 	}
 
 	.header__nav.open-menu {

@@ -3,6 +3,8 @@
 body {
     font-family: Open Sans, sans-serif;
     font-weight: 500;
+
+    overflow-x: hidden;
 }
 
 /* HEADER
@@ -16,9 +18,16 @@ header {
     .container {
         height: 105px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
     }
+}
+
+.logo {
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: 900;
+
+    color: #fff;
 }
 
 /* MENU STYLE */
@@ -66,6 +75,8 @@ header {
     border: 2px solid #fff;
     border-radius: 20px;
 
+    font-weight: 700;
+
     padding: 6px 12px 6px 12px;
 }
 
@@ -83,16 +94,15 @@ header {
 
     header {
         .container {
-            align-items: flex-start;
+           
         }
     }
 
     .header__menu {
         display: block; 
         text-align: right;
-
-        margin-top: 100px;
-
+        position: absolute;
+        top: 50px;
     }
 
     .header__nav.open-menu{
