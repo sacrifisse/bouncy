@@ -50,7 +50,6 @@ body {
 	font-family: Open Sans, sans-serif;
 	font-weight: 500;
 	overflow-x: hidden;
-	background-color: #333d3f;
 }
 
 html {
@@ -61,6 +60,7 @@ html {
 ---------------------------------------------*/
 header {
 	height: 105px;
+	z-index: 6;
 }
 header .container {
 	height: 105px;
@@ -82,6 +82,10 @@ header .container {
 	margin-left: 10px;
 	z-index: 3;
 	color: #fff;
+}
+
+.bg {
+	background-color: #333d3f;
 }
 
 /* MENU STYLE */
@@ -126,8 +130,11 @@ header .container {
 
 /* MEDIA */
 @media (max-width: 992px) {
-	.intro {
-		height: 500px;
+	header {
+		height: 75px;
+	}
+	header .container {
+		height: 75px;
 	}
 
 	.header__nav {
@@ -141,6 +148,7 @@ header .container {
 
 	.open-menu {
 		display: block;
+		background-color: #333d3f;
 	}
 
 	.header__menu {
@@ -153,17 +161,20 @@ header .container {
 		        flex-direction: column;
 		text-align: right;
 		position: absolute;
-		top: 50px;
-		right: 20px;
+		top: 36px;
+		background-color: #333d3f;
+		width: 100%;
 	}
 
 	.header__nav.open-menu {
 		left: 0;
+		background-color: #333d3f;
 	}
 
 	.header__menu li {
-		margin: 22px;
+		margin: 25px;
 		text-align: right;
+		margin-right: 50px;
 	}
 
 	/* BUTTON STYLE */
@@ -174,6 +185,7 @@ header .container {
 		display: block;
 		z-index: 4;
 		right: 10px;
+		cursor: pointer;
 	}
 
 	.menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before {
@@ -202,24 +214,24 @@ header .container {
 
 	.menu-burger__header.open-menu span {
 		opacity: 0;
-		-webkit-transition: 0.5s;
-		transition: 0.5s;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
 	}
 
 	.menu-burger__header.open-menu:before {
 		-webkit-transform: rotate(38deg);
 		        transform: rotate(38deg);
 		top: 13px;
-		-webkit-transition: 0.4s;
-		transition: 0.4s;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
 	}
 
 	.menu-burger__header.open-menu:after {
 		-webkit-transform: rotate(-38deg);
 		        transform: rotate(-38deg);
 		bottom: 14px;
-		-webkit-transition: 0.4s;
-		transition: 0.4s;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
 	}
 }
 /* INTRO
@@ -227,6 +239,7 @@ header .container {
 .intro {
 	position: absolute;
 	top: 0;
+	z-index: -2;
 	width: 100%;
 	height: 900px;
 }
@@ -235,6 +248,7 @@ header .container {
 	display: block;
 	width: 100%;
 	height: 100%;
+	z-index: -2;
 	-o-object-fit: cover;
 	   object-fit: cover;
 	-o-object-position: center;
@@ -243,6 +257,6 @@ header .container {
 
 @media (max-width: 767px) {
 	.intro {
-		height: 650px;
+		height: 750px;
 	}
 }
