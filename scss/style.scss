@@ -19,7 +19,6 @@ html {
 header {
 
     height: 105px;
-    background-color: cadetblue;
 
     .container {
         height: 105px;
@@ -32,6 +31,9 @@ header {
 .logo {
     font-family: Source Sans Pro, sans-serif;
     font-weight: 900;
+    font-size: 25px;
+
+    margin-left: 20px;
 
     color: #fff;
 }
@@ -61,7 +63,7 @@ header {
 }
 
 .menu__item {
-    color: rgb(235, 235, 235);
+    color: #ebebeb;
     
 }
 
@@ -90,12 +92,12 @@ header {
 
 @media (max-width: 767px) {
     .header__nav {
-        // display: block;
+        display: block;
         position: absolute;
-        width: 50%;
+        width: 100%;
         transition: all 0.4s ease;
-        right: -100%;
-        display: none;
+        left: -100%;
+        
     }
 
     .open-menu {
@@ -103,19 +105,22 @@ header {
     }
 
     .header__menu {
-        display: block; 
+        display: flex; 
+        flex-direction: column;
         text-align: right;
         position: absolute;
         top: 50px;
+        right: 20px;
     }
 
     .header__nav.open-menu{
-        right:0;
+        left:0;
 
     }
 
     .header__menu li {
-        margin: 30px;
+        margin: 22px;
+        text-align: right;
         
     }
 
@@ -127,7 +132,7 @@ header {
         height: 30px;
         display: block;
         margin: 10px;
-        right: 0;
+        right: 20px;
         z-index: 4;
     }
 
@@ -135,7 +140,7 @@ header {
         height: 3px;
         width: 100%;
         position: absolute;
-        background: #515758;
+        background: #ebebeb;
         margin: 0 auto;
 
     }
