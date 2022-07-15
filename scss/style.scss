@@ -114,7 +114,6 @@ header {
 
     .open-menu {
         display: block;
-        background-color: #333d3f;
     }
 
     .header__menu {
@@ -125,12 +124,12 @@ header {
         top: 36px;
         background-color: #333d3f;
         width: 100%;
+        height: 100vh;
 
     }
 
     .header__nav.open-menu{
         left:0;
-        background-color: #333d3f;
 
     }
 
